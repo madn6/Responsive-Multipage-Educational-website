@@ -1,0 +1,29 @@
+@use "../partials/index.scss" as p;
+.courses {
+	margin-top: 10rem;
+
+	.courses__container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		.course {
+			background: p.$color-bg-1;
+			text-align: center;
+			border: 1px solid transparent;
+			transition: p.$transtion;
+			border-radius: 0.5rem;
+			overflow: hidden;
+			&:hover {
+				background: transparent;
+				border-color: p.$color-primary;
+			}
+         .course__info{
+            padding: 2rem;
+            p{
+               margin: 1.2rem 0 2rem;
+               font-size: 0.9rem;
+            }
+         }
+		}
+	}
+}

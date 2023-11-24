@@ -1,0 +1,60 @@
+@use "../partials/index.scss" as p;
+
+.categories {
+	background-color: p.$color-bg-1;
+	height: 32rem;
+	.categories__container {
+		display: grid;
+		grid-template-columns: 40% 60%;
+		h1 {
+			line-height: 1;
+			margin-bottom: 3rem;
+		}
+		.categories__left {
+			margin-right: 4rem;
+			p {
+				margin: 1rem 0 3rem;
+			}
+		}
+
+		.categories__right {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1.2rem;
+			.category {
+				background: p.$color-bg-2;
+				padding: 2rem;
+				border-radius: 2rem;
+				transition: p.$transtion;
+
+				&:nth-child(2) .category__icon {
+					background: p.$color-danger;
+				}
+				&:nth-child(3) .category__icon {
+					background: p.$color-sucess;
+				}
+				&:nth-child(4) .category__icon {
+					background: p.$color-warning;
+				}
+				&:nth-child(5) .category__icon {
+					background: p.$color-sucess;
+				}
+
+				&:hover {
+					box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+				}
+				h5 {
+					margin: 2rem 0 1rem;
+				}
+				p {
+					font-size: 0.85rem;
+				}
+				.category__icon {
+					background: p.$color-primary;
+					padding: 0.7rem;
+					border-radius: 0.9rem;
+				}
+			}
+		}
+	}
+}

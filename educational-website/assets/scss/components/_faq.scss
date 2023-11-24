@@ -1,0 +1,35 @@
+@use "../partials/index.scss" as p;
+
+.faqs {
+	background: p.$color-bg-1;
+	box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+	.faqs__container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+		.faq {
+			padding: 2rem;
+			display: flex;
+			align-items: center;
+			gap: 1.4rem;
+			height: fit-content;
+			background: p.$color-primary;
+			cursor: pointer;
+			h4 {
+				font-size: 1rem;
+				line-height: 2.2;
+			}
+			.faq__icon {
+				align-self: flex-start;
+				font-size: 1.2rem;
+			}
+			p {
+				margin-top: 0.8rem;
+				display: none;
+			}
+		}
+		.open p {
+			display: block;
+		}
+	}
+}

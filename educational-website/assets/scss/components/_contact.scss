@@ -1,0 +1,92 @@
+@use "../partials/index.scss" as p;
+
+.contact {
+	.contact__container {
+		background: p.$color-bg-1;
+		padding: 4rem;
+		display: grid;
+		height: 30rem;
+		grid-template-columns: 40% 60%;
+		gap: 4rem;
+		margin: 7rem auto;
+		border-radius: 1rem;
+
+		.contact__aside {
+			background: p.$color-primary;
+			padding: 3rem;
+			border-radius: 1rem;
+			position: relative;
+			bottom: 10rem;
+
+			.aside__image {
+				width: 12rem;
+				margin-bottom: 2rem;
+			}
+
+			h2 {
+				text-align: left;
+				margin-bottom: 1rem;
+			}
+
+			p {
+				font-size: 0.9rem;
+				margin-bottom: 2rem;
+			}
+
+			.contact__details {
+				li {
+					display: flex;
+					gap: 1rem;
+					align-items: center;
+					margin-bottom: 1rem;
+				}
+			}
+
+			.contact__socials {
+				display: flex;
+				margin-top: 3rem;
+				gap: 0.8rem;
+				a {
+					background: p.$color-bg-2;
+					padding: 0.5rem;
+					border-radius: 50%;
+					font-size: 0.9rem;
+					transition: p.$transtion;
+
+					&:hover {
+						background: transparent;
+					}
+				}
+			}
+		}
+	}
+
+	.contact__form {
+		display: flex;
+		flex-direction: column;
+		gap: 1.2rem;
+		margin-right: 4rem;
+
+		.form__name {
+			display: flex;
+			gap: 1.2rem;
+		}
+
+		input[type="text"] {
+			width: 50%;
+		}
+      
+		input,
+		textarea {
+         width: 100%;
+			padding: 1rem;
+			background: p.$color-bg;
+			color: p.$color-white;
+		}
+		.btn {
+         width: max-content;
+			margin-top: 1rem;
+			cursor: pointer;
+		}
+	}
+}

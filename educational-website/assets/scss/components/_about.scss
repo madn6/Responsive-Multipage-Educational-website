@@ -1,0 +1,58 @@
+@use "../partials/index" as p;
+
+.about__achievements {
+	margin-top: 3rem;
+
+	.about__achievements-container {
+		display: grid;
+		grid-template-columns: 40% 60%;
+		gap: 5rem;
+
+		.about__achievements-right > p {
+			margin: 1.6rem 0 2.5rem;
+		}
+
+		.achievements__cards {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1.5rem;
+
+			.achievement__card {
+				background: p.$color-bg-1;
+				padding: 1.6rem;
+				border-radius: 1rem;
+				text-align: center;
+				transition: p.$transtion;
+
+				&:nth-child(2) .achievement__icon {
+					background: p.$color-sucess;
+				}
+
+				&:nth-child(3) .achievement__icon {
+					background: p.$color-primary;
+				}
+
+				&:hover {
+					background: p.$color-bg-2;
+					box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+				}
+
+				h3 {
+					margin-top: 1rem;
+				}
+
+				p {
+					margin-top: 1rem;
+				}
+			}
+
+			.achievement__icon {
+				background: p.$color-danger;
+				padding: 0.6rem;
+				border-radius: 1rem;
+				margin-bottom: 2rem;
+				font-size: 2rem;
+			}
+		}
+	}
+}

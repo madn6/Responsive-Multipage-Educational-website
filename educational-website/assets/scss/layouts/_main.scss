@@ -1,0 +1,11 @@
+@use "../partials/index.scss" as p;
+
+
+body{
+   font-family: p.$font-family-Montserrat;
+   line-height: 1.7;
+   color: p.$color-white;
+   background-color: p.$color-bg;
+   user-select: none;
+}
+
